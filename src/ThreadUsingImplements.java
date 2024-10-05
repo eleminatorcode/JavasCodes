@@ -4,9 +4,7 @@
 //
 
 public class ThreadUsingImplements {
-    public ThreadUsingImplements() {
-    }
-
+    
     public static void main(String[] args) {
         ThreadEx1 t1 = new ThreadEx1();
         Thread t2 = new Thread(t1);

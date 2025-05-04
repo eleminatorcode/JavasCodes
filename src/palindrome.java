@@ -4,21 +4,22 @@ public class palindrome {
         Scanner sc= new Scanner(System.in);
         System.out.print("Enter the number:");
         int n=sc.nextInt();
-        for(int i=1;i<=n;i++){
-            for(int j=n-i;j>=1;j--){
-                System.out.print(" ");
-            }
-            for(int k=1;k<=i;k++){
-                System.out.print(((i+1)-k));
-            }
-
-                for (int j = 2; j <= i; j++) {
-                    System.out.print(j);
-                }
-            System.out.println();
+        int flag=0;
+       String num=String.valueOf(n);
+       int length= num.length();
+       for(int i=0;i<length/2;i++){
+       if(num.charAt(i)== num.charAt(length-(i+1))){
+           flag=1;
         }
-
-
+       else {
+           flag=0;
+       }
+       }
+       if(flag==1)
+        System.out.println("true");
+       else{
+           System.out.println("false");
+       }
 
     }
 }
